@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7f8fc" />
+    <meta name="description" content="Find your next opportunity with Jobzy. Search jobs, build your profile, and apply with confidence." />
+    <title>Jobzy — Find work that moves you</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#home" data-route="home" aria-label="Jobzy home"><span class="brand-mark">j</span><span>jobzy<span class="brand-period">.</span></span></a>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <a href="#home" data-route="home">Home</a><a href="#about" data-route="about">About</a><a href="#jobs" data-route="jobs">Find jobs</a><a href="#profile" data-route="profile">My profile</a><a href="#contact" data-route="contact">Contact</a>
+      </nav>
+      <div class="header-actions"><button class="button button-quiet" type="button" data-route="login" id="header-login">Log in</button><button class="button button-primary header-signup" type="button" data-route="register">Sign up <span aria-hidden="true">↗</span></button></div>
+    </header>
+
+    <main>
+      <section class="page active" id="page-home" data-page="home">
+        <div class="hero">
+          <div class="hero-copy">
+            <div class="eyebrow"><span class="eyebrow-dot"></span> Your next chapter starts here</div>
+            <h1>Find work that<br />moves <span>you forward.</span></h1>
+            <p class="hero-lede">Good things happen when the right people find the right work. Let’s find your next opportunity.</p>
+            <form class="search-bar" id="hero-search">
+              <label class="search-field"><span class="field-icon" aria-hidden="true">⌕</span><span class="sr-only">Job title or keyword</span><input id="hero-keyword" type="search" placeholder="Job title or keyword" /></label>
+              <span class="search-divider" aria-hidden="true"></span>
+              <label class="search-field search-location"><span class="field-icon location-icon" aria-hidden="true">⌖</span><span class="sr-only">Location</span><input id="hero-location" type="text" placeholder="City or remote" /></label>
+              <button class="button button-primary search-submit" type="submit">Search jobs <span aria-hidden="true">→</span></button>
+            </form>
+            <p class="popular-searches">Popular: <button type="button" data-search="Design">Design</button><button type="button" data-search="Marketing">Marketing</button><button type="button" data-search="Remote">Remote</button></p>
+          </div>
+          <div class="hero-art" aria-label="Illustration of a person finding a job">
+            <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div><div class="art-sun"></div>
+            <div class="art-card art-card-top"><span class="tiny-check">✓</span><span><b>New opportunity</b><small>Product Designer · Remote</small></span></div>
+            <div class="art-person"><div class="person-hair"></div><div class="person-face"></div><div class="person-body"></div><div class="person-arm"></div></div>
+            <div class="art-plant"><i></i><i></i><i></i><b></b></div>
+            <div class="art-card art-card-bottom"><span class="sparkle">✦</span><span><b>You're a great match!</b><small>Your profile is looking good</small></span></div>
+            <div class="art-float float-star">✳</div><div class="art-float float-plus">+</div>
+          </div>
+        </div>
+        <div class="trust-strip"><p>Helping people find their place at</p><div class="company-logos" aria-label="Partner companies"><span>◈ notion</span><span class="logo-bold">stripe</span><span>◉ figma</span><span class="logo-serif">loom</span><span>◌ Webflow</span></div></div>
+        <div class="home-bottom section-wrap"><div><p class="eyebrow">A better way to work</p><h2>Make your next move<br />a good one.</h2></div><p>Discover thoughtfully curated roles, share what makes you unique, and take the next step on your terms.</p><button class="button button-outline" data-route="jobs" type="button">Explore open roles <span aria-hidden="true">→</span></button></div>
+      </section>
+
+      <section class="page section-page" id="page-about" data-page="about">
+        <div class="page-heading"><p class="eyebrow">A little about us</p><h1>Work should work<br /><span>for everyone.</span></h1><p>Jobzy makes finding a job feel less like a job. We bring people and meaningful opportunities together, with a little more care at every step.</p></div>
+        <div class="about-grid">
+          <article class="about-card about-highlight"><span class="about-icon">✳</span><h2>People first, always.</h2><p>Your goals, your story, your next step. We make space for the whole person behind every application.</p><span class="about-card-number">01</span></article>
+          <article class="about-card"><span class="about-icon icon-lilac">↗</span><h2>Opportunities with purpose.</h2><p>Explore roles from teams doing thoughtful work and building things that matter.</p><span class="about-card-number">02</span></article>
+          <article class="about-card"><span class="about-icon icon-peach">♡</span><h2>Confidence to keep going.</h2><p>Tools that help you show your strengths and take the next step with confidence.</p><span class="about-card-number">03</span></article>
+        </div>
+        <div class="about-cta"><div><p class="eyebrow">Your next chapter</p><h2>It could start today.</h2></div><button class="button button-primary" type="button" data-route="jobs">Find your next job <span aria-hidden="true">→</span></button></div>
+      </section>
+
+      <section class="page section-page" id="page-jobs" data-page="jobs">
+        <div class="jobs-heading"><div><p class="eyebrow">A good place to start</p><h1>Find your next <span>thing.</span></h1><p>Fresh opportunities from teams you’ll love.</p></div><span class="job-count" id="job-count">9 open roles</span></div>
+        <div class="jobs-toolbar"><label class="jobs-search"><span aria-hidden="true">⌕</span><input id="jobs-keyword" type="search" placeholder="Job title, company, or keyword" aria-label="Search jobs" /></label><label class="select-wrap"><span class="sr-only">Job category</span><select id="jobs-category"><option value="">All categories</option><option>Design</option><option>Engineering</option><option>Marketing</option><option>People</option><option>Product</option></select></label><label class="select-wrap"><span class="sr-only">Work arrangement</span><select id="jobs-location"><option value="">All locations</option><option>Remote</option><option>Hybrid</option><option>On-site</option></select></label></div>
+        <div class="job-list" id="job-list"></div><div class="jobs-footnote"><span class="eyebrow-dot"></span> New opportunities are added regularly. Check back soon.</div>
+      </section>
+
+      <section class="page section-page" id="page-details" data-page="details"><button class="back-link" type="button" data-route="jobs">← Back to all jobs</button><div class="detail-layout" id="job-detail-content"></div></section>
+
+      <section class="page section-page narrow-page" id="page-login" data-page="login">
+        <div class="form-intro"><p class="eyebrow">Welcome back</p><h1>Good to see<br /><span>you again.</span></h1><p>Log in to pick up where you left off.</p></div>
+        <form class="form-card" id="login-form"><label class="form-label">Email address<input name="email" type="email" placeholder="you@example.com" autocomplete="email" required /></label><label class="form-label">Password<input name="password" type="password" placeholder="Enter your password" autocomplete="current-password" required minlength="6" /></label><button class="button button-primary button-wide" type="submit">Log in <span aria-hidden="true">→</span></button><p class="form-switch">New to Jobzy? <button type="button" data-route="register">Create an account</button></p><p class="form-note">Your account is stored on this device for this demo.</p></form>
+      </section>
+
+      <section class="page section-page narrow-page" id="page-register" data-page="register">
+        <div class="form-intro"><p class="eyebrow">Make your next move</p><h1>Your next chapter<br /><span>starts here.</span></h1><p>Create your free Jobzy account.</p></div>
+        <form class="form-card" id="register-form"><label class="form-label">Your name<input name="name" type="text" placeholder="Alex Morgan" autocomplete="name" required /></label><label class="form-label">Email address<input name="email" type="email" placeholder="you@example.com" autocomplete="email" required /></label><label class="form-label">Create a password<input name="password" type="password" placeholder="At least 6 characters" autocomplete="new-password" required minlength="6" /></label><button class="button button-primary button-wide" type="submit">Create account <span aria-hidden="true">→</span></button><p class="form-switch">Already have an account? <button type="button" data-route="login">Log in</button></p><p class="form-note">By creating an account, you agree to use Jobzy responsibly.</p></form>
+      </section>
+
+      <section class="page section-page profile-page" id="page-profile" data-page="profile">
+        <div class="jobs-heading"><div><p class="eyebrow">Your story, all in one place</p><h1>My <span>profile.</span></h1><p>Help employers get to know the person behind the application.</p></div><div class="profile-avatar" id="profile-avatar">J</div></div>
+        <form class="profile-form" id="profile-form">
+          <div class="profile-panel"><div class="panel-heading"><span class="panel-icon">01</span><div><h2>Personal details</h2><p>The basics to help us introduce you.</p></div></div><div class="form-grid">
+            <label class="form-label">Full name<input name="fullName" type="text" placeholder="Your full name" required /></label><label class="form-label">Email address<input name="email" type="email" placeholder="you@example.com" required /></label><label class="form-label">Phone number<input name="phone" type="tel" placeholder="+1 (555) 000-0000" /></label><label class="form-label">Location<input name="location" type="text" placeholder="City, country or remote" /></label><label class="form-label form-span">About you<textarea name="summary" rows="4" placeholder="A few words about what you do and what you’re looking for..."></textarea></label>
+          </div></div>
+          <div class="profile-panel"><div class="panel-heading"><span class="panel-icon panel-icon-lilac">02</span><div><h2>Education</h2><p>Share a little about your learning journey.</p></div></div><div class="form-grid">
+            <label class="form-label">School or institution<input name="school" type="text" placeholder="Institution name" /></label><label class="form-label">Degree or qualification<input name="degree" type="text" placeholder="e.g. Bachelor of Arts" /></label><label class="form-label">Field of study<input name="field" type="text" placeholder="e.g. Graphic Design" /></label><label class="form-label">Graduation year<input name="graduation" type="text" inputmode="numeric" placeholder="e.g. 2024" /></label>
+          </div></div>
+          <div class="profile-panel resume-panel"><div class="panel-heading"><span class="panel-icon panel-icon-peach">03</span><div><h2>Your resume</h2><p>A resume helps employers see what you bring.</p></div></div><div class="resume-drop"><div class="upload-mark">↑</div><div><strong id="resume-file-name">Upload your resume</strong><p>PDF, DOC, or DOCX · up to 10 MB</p></div><label class="button button-outline upload-button">Choose file<input id="profile-resume" type="file" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" /></label></div></div>
+          <div class="profile-actions"><p id="profile-status" class="inline-status" aria-live="polite"></p><button class="button button-primary" type="submit">Save my profile <span aria-hidden="true">→</span></button></div>
+        </form>
+      </section>
+
+      <section class="page section-page narrow-page" id="page-apply" data-page="apply">
+        <div class="form-intro"><p class="eyebrow">One step closer</p><h1>Apply with<br /><span>confidence.</span></h1><p id="apply-job-name">Tell the team why you’re a great fit.</p></div>
+        <form class="form-card" id="apply-form"><label class="form-label">Your name<input name="name" type="text" placeholder="Your full name" required /></label><label class="form-label">Email address<input name="email" type="email" placeholder="you@example.com" required /></label><label class="form-label">A note to the hiring team<textarea name="message" rows="5" placeholder="What excites you about this opportunity?" required></textarea></label><label class="form-label">Resume<input name="resume" id="apply-resume" type="file" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" /><span class="input-hint">PDF, DOC, or DOCX · up to 10 MB</span></label><button class="button button-primary button-wide" type="submit">Send application <span aria-hidden="true">→</span></button><p class="form-note">Your application will be saved on this device for this demo.</p></form>
+      </section>
+
+      <section class="page section-page contact-page" id="page-contact" data-page="contact">
+        <div class="contact-copy"><p class="eyebrow">We’re real people, too</p><h1>Let’s talk<br /><span>about it.</span></h1><p>Questions about finding a role or setting up your profile? We’d love to hear from you.</p><div class="contact-details"><div class="contact-detail"><span class="contact-icon">@</span><div><small>Email us</small><a href="mailto:hello@jobzy.example">hello@jobzy.example</a></div></div><div class="contact-detail"><span class="contact-icon">⌖</span><div><small>Our home base</small><p>Everywhere you are. Jobzy is remote-first.</p></div></div><div class="contact-detail"><span class="contact-icon">◷</span><div><small>When we’re around</small><p>Monday–Friday, 9am–5pm</p></div></div></div></div>
+        <form class="form-card contact-form" id="contact-form"><h2>Send us a note</h2><p>We’ll get back to you as soon as we can.</p><label class="form-label">Your name<input name="name" type="text" placeholder="Your name" required /></label><label class="form-label">Email address<input name="email" type="email" placeholder="you@example.com" required /></label><label class="form-label">How can we help?<textarea name="message" rows="5" placeholder="Write your message..." required></textarea></label><button class="button button-primary button-wide" type="submit">Send message <span aria-hidden="true">→</span></button></form>
+      </section>
+    </main>
+
+    <footer class="site-footer"><a class="brand footer-brand" href="#home" data-route="home"><span class="brand-mark">j</span><span>jobzy<span class="brand-period">.</span></span></a><p>A little closer to your next big thing.</p><span>© <span id="current-year"></span> Jobzy. Made for what’s next.</span></footer>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
